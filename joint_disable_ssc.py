@@ -13,11 +13,12 @@
 
 import maya.cmds as cmds
 
+# pylint: disable=no-member
 selected_joints = cmds.ls(selection=True, type='joint')
 
 if selected_joints:
     for joint in selected_joints:
-        joint_name = j
+        joint_name = joint
 
         # Disable Segment Scale Compensate for the selected joint
         cmds.setAttr(joint_name + '.segmentScaleCompensate', 0)
