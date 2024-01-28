@@ -13,16 +13,15 @@
 
 import maya.cmds as cmds
 
-# Get the currently selected joint
-selected_joint = cmds.ls(selection=True, type='joint')
+selected_joints = cmds.ls(selection=True, type='joint')
 
-if selected_joint:
-    # Check if the selected item is a joint
-    joint_name = selected_joint[0]
+if selected_joints:
+    for joint in selected_joints:
+        joint_name = j
 
-    # Disable Segment Scale Compensate for the selected joint
-    cmds.setAttr(joint_name + '.segmentScaleCompensate', 0)
+        # Disable Segment Scale Compensate for the selected joint
+        cmds.setAttr(joint_name + '.segmentScaleCompensate', 0)
 
-    print(f"Segment Scale Offset turned off for {joint_name}.")
+        print(f"Segment Scale Offset turned off for {joint_name}.")
 else:
     print("Please select a joint.")
