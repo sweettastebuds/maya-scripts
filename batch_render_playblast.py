@@ -18,17 +18,6 @@ try:
 except:
     pass
 
-# Rest of the code...
-import os
-import maya.cmds as cmds
-import imageio
-
-try:
-    import maya.standalone
-    maya.standalone.initialize()
-except:
-    pass
-
 def fix_references():
     """
     Fix the file paths of referenced files in the Maya scene.
