@@ -14,7 +14,7 @@
 import maya.cmds as cmds
 
 # pylint: disable=no-member
-selected_joints = cmds.ls(selection=True, type='joint')
+selected_joints = cmds.ls(type='joint')
 
 if selected_joints:
     for joint in selected_joints:
